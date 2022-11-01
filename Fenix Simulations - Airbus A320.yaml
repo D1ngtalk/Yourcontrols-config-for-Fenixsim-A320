@@ -1,0 +1,3794 @@
+# Version 1.0.5.139
+
+include:
+  - definitions/modules/physics.yaml
+  - definitions/modules/radios.yaml
+  - definitions/modules/service.yaml
+  - definitions/modules/slew.yaml
+
+shared:
+  # OVHD PANEL
+  # ADIRS
+  # NAV
+  -
+    type: var
+    var_name: L:S_OH_NAV_DATA_DISP
+  -
+    type: var
+    var_name: L:S_OH_NAV_SYS_DISP
+  -
+    type: var
+    var_name: L:S_OH_NAV_IR1_MODE
+  -
+    type: var
+    var_name: L:S_OH_NAV_IR2_MODE
+  -
+    type: var
+    var_name: L:S_OH_NAV_IR3_MODE
+  -
+    type: var
+    var_name: L:S_OH_NAV_ADR1
+  -
+    type: var
+    var_name: L:S_OH_NAV_ADR2
+  -
+    type: var
+    var_name: L:S_OH_NAV_ADR3
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADR1_L
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADR1_U
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADR2_L
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADR2_U
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADR3_L
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADR3_U
+  -
+    type: var
+    var_name: L:I_OH_NAV_IR1_SWITCH_L
+  -
+    type: var
+    var_name: L:I_OH_NAV_IR1_SWITCH_U
+  -
+    type: var
+    var_name: L:I_OH_NAV_IR2_SWITCH_L
+  -
+    type: var
+    var_name: L:I_OH_NAV_IR2_SWITCH_U
+  -
+    type: var
+    var_name: L:I_OH_NAV_IR3_SWITCH_L
+  -
+    type: var
+    var_name: L:I_OH_NAV_IR3_SWITCH_U
+  -
+    type: var
+    var_name: L:I_OH_NAV_ADIRS_ON_BAT
+  -
+    type: var
+    var_name: L:I_OH_NAV_QUEUE_ENT
+  -
+    type: var
+    var_name: L:I_OH_NAV_QUEUE_CLR
+  # KEY
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_0
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_1
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_2
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_3
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_4
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_5
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_6
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_7
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_8
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_9
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_ENT
+  -
+    type: var
+    var_name: L:S_OH_ADIRS_KEY_CLR
+  # FLT CTL
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_ELAC_1
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_SEC_1
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_FAC_1
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_ELAC_2
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_SEC_2
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_SEC_3
+  -
+    type: var
+    var_name: L:S_OH_FLT_CTL_FAC_2
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_ELAC_1_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_ELAC_1_U
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_ELAC_2_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_ELAC_2_U
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_FAC_1_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_FAC_1_U
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_FAC_2_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_FAC_2_U
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_SEC_1_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_SEC_1_U
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_SEC_2_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_SEC_2_U
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_SEC_3_L
+  -
+    type: var
+    var_name: L:I_OH_FLT_CTL_SEC_3_U
+  # FIRE
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG1_AGENT1
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG1_AGENT2
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG2_AGENT1
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG2_AGENT2
+  -
+    type: var
+    var_name: L:S_OH_FIRE_APU_AGENT
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG1_TEST
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG2_TEST
+  -
+    type: var
+    var_name: L:S_OH_FIRE_APU_TEST
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG1_BUTTON
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG1_BUTTON_Cover
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_BUTTON
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG2_BUTTON
+  -
+    type: var
+    var_name: L:S_OH_FIRE_ENG2_BUTTON_Cover
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_BUTTON
+  -
+    type: var
+    var_name: L:S_OH_FIRE_APU_BUTTON
+  -
+    type: var
+    var_name: L:S_OH_FIRE_APU_BUTTON_Cover
+  -
+    type: var
+    var_name: L:I_OH_FIRE_APU_BUTTON
+  -
+    type: var
+    var_name: L:I_OH_FIRE_APU_BUTTON_ON_BATT
+  -
+    type: var
+    var_name: L:I_OH_FIRE_APU_AGENT_L
+  -
+    type: var
+    var_name: L:I_OH_FIRE_APU_AGENT_U
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_AGENT1_L
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_AGENT1_U
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_AGENT2_L
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_AGENT2_U
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_AGENT1_L
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_AGENT1_U
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_AGENT2_L
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_AGENT2_U
+  -
+    type: var
+    var_name: L:I_ENG_FIRE_1
+  -
+    type: var
+    var_name: L:I_ENG_FIRE_2
+  -
+    type: var
+    var_name: L:I_OH_FIRE_APU_BUTTON_COL1
+  -
+    type: var
+    var_name: L:I_OH_FIRE_APU_BUTTON_COL2
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_BUTTON_COL1
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG1_BUTTON_COL2
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_BUTTON_COL1
+  -
+    type: var
+    var_name: L:I_OH_FIRE_ENG2_BUTTON_COL2
+  # HYD
+  -
+    type: var
+    var_name: L:S_OH_HYD_ENG_1_PUMP
+  -
+    type: var
+    var_name: L:S_OH_HYD_ENG_2_PUMP
+  -
+    type: var
+    var_name: L:S_OH_HYD_PTU
+  -
+    type: var
+    var_name: L:S_OH_HYD_BLUE_ELEC_PUMP
+  -
+    type: var
+    var_name: L:S_OH_HYD_BLUE_ELEC_PUMP_Cover
+  -
+    type: var
+    var_name: L:S_OH_HYD_YELLOW_ELEC_PUMP
+  -
+    type: var
+    var_name: L:S_OH_HYD_RAT_MAN_ON
+  -
+    type: var
+    var_name: L:S_OH_HYD_RAT_MAN_ON_Cover
+  -
+    type: var
+    var_name: L:S_OH_HYD_BLUE_PUMP_OVERRIDE
+  -
+    type: var
+    var_name: L:S_OH_HYD_BLUE_PUMP_OVERRIDE_Cover
+  -
+    type: var
+    var_name: L:S_OH_HYD_LMV_GREEN
+  -
+    type: var
+    var_name: L:S_OH_HYD_LMV_GREEN_Cover
+  -
+    type: var
+    var_name: L:S_OH_HYD_LMV_BLUE
+  -
+    type: var
+    var_name: L:S_OH_HYD_LMV_BLUE_Cover
+  -
+    type: var
+    var_name: L:S_OH_HYD_LMV_YELLOW
+  -
+    type: var
+    var_name: L:S_OH_HYD_LMV_YELLOW_Cover
+  -
+    type: var
+    var_name: L:I_OH_HYD_BLUE_ELEC_PUMP_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_BLUE_ELEC_PUMP_U
+  -
+    type: var
+    var_name: L:I_OH_HYD_YELLOW_ELEC_PUMP_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_YELLOW_ELEC_PUMP_U
+  -
+    type: var
+    var_name: L:I_OH_HYD_ENG_1_PUMP_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_ENG_1_PUMP_U
+  -
+    type: var
+    var_name: L:I_OH_HYD_ENG_2_PUMP_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_ENG_2_PUMP_U
+  -
+    type: var
+    var_name: L:I_OH_HYD_PTU_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_PTU_U
+  -
+    type: var
+    var_name: L:I_OH_HYD_BLUE_PUMP_OVERRIDE_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_LMV_BLUE_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_LMV_GREEN_L
+  -
+    type: var
+    var_name: L:I_OH_HYD_LMV_YELLOW_L
+  # FUEL
+  -
+    type: var
+    var_name: L:S_OH_FUEL_LEFT_1
+  -
+    type: var
+    var_name: L:S_OH_FUEL_LEFT_2
+  -
+    type: var
+    var_name: L:S_OH_FUEL_RIGHT_1
+  -
+    type: var
+    var_name: L:S_OH_FUEL_RIGHT_2
+  -
+    type: var
+    var_name: L:S_OH_FUEL_XFEED
+  -
+    type: var
+    var_name: L:S_OH_FUEL_MODE_SEL
+  -
+    type: var
+    var_name: L:S_OH_FUEL_CENTER_1
+  -
+    type: var
+    var_name: L:S_OH_FUEL_CENTER_2
+  -
+    type: var
+    var_name: L:I_OH_FUEL_CENTER_1_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_CENTER_1_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_CENTER_2_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_CENTER_2_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_XFEED_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_XFEED_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_MODE_SEL_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_MODE_SEL_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_LEFT_1_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_LEFT_1_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_LEFT_2_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_LEFT_2_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_RIGHT_1_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_RIGHT_1_U
+  -
+    type: var
+    var_name: L:I_OH_FUEL_RIGHT_2_L
+  -
+    type: var
+    var_name: L:I_OH_FUEL_RIGHT_2_U
+  # ELEC
+  -
+    type: var
+    var_name: L:S_OH_ELEC_BAT1
+  -
+    type: var
+    var_name: L:S_OH_ELEC_BAT2
+  -
+    type: var
+    var_name: L:S_OH_ELEC_COMMERCIAL
+  -
+    type: var
+    var_name: L:S_OH_ELEC_GALY
+  -
+    type: var
+    var_name: L:S_OH_ELEC_IDG1
+  -
+    type: var
+    var_name: L:S_OH_ELEC_IDG1_Cover
+  -
+    type: var
+    var_name: L:S_OH_ELEC_IDG2
+  -
+    type: var
+    var_name: L:S_OH_ELEC_IDG2_Cover
+  -
+    type: var
+    var_name: L:S_OH_ELEC_GEN1
+  -
+    type: var
+    var_name: L:S_OH_ELEC_GEN2
+  -
+    type: var
+    var_name: L:S_OH_ELEC_APU_GENERATOR
+  -
+    type: var
+    var_name: L:S_OH_ELEC_EXT_PWR
+  -
+    type: var
+    var_name: L:S_OH_ELEC_BUSTIE
+  -
+    type: var
+    var_name: L:S_OH_ELEC_AC_ESS_FEED
+  -
+    type: var
+    var_name: L:S_OH_ELEC_APU_MASTER
+  -
+    type: var
+    var_name: L:S_OH_ELEC_APU_START
+  -
+    type: var
+    var_name: L:S_OH_ELEC_EMER_GEN_TEST
+  -
+    type: var
+    var_name: L:S_OH_ELEC_EMER_GEN_TEST_Cover
+  -
+    type: var
+    var_name: L:S_OH_ELEC_GEN1_LINE
+  -
+    type: var
+    var_name: L:S_OH_ELEC_EMER_GEN_MAN_ON
+  -
+    type: var
+    var_name: L:S_OH_ELEC_EMER_GEN_MAN_ON_Cover
+  -
+    type: var
+    var_name: L:I_OH_ELEC_APU_MASTER_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_APU_MASTER_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_APU_START_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_APU_START_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_AC_ESS_FEED_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_AC_ESS_FEED_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_APU_GENERATOR_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_APU_GENERATOR_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_BAT1_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_BAT1_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_BAT2_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_BAT2_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_BUSTIE_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_COMMERCIAL_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_COMMERCIAL_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_EXT_PWR_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_EXT_PWR_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GALY_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GALY_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GEN1_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GEN1_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GEN2_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GEN2_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_IDG1_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_IDG1_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GEN1_LINE_L
+  -
+    type: var
+    var_name: L:I_OH_ELEC_GEN1_LINE_U
+  -
+    type: var
+    var_name: L:I_OH_ELEC_EMERG_GEN_FAULT
+  # AIR COND(PNEUMATIC)
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_PACK_1
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_PACK_2
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_ENG1_BLEED
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_ENG2_BLEED
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_APU_BLEED
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_RAM_AIR
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_RAM_AIR_Cover
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_HOT_AIR
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_PACK_FLOW
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_XBLEED_SELECTOR
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_COCKPIT_TEMP
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_FWD_TEMP
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_AFT_TEMP
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_WING_ANTI_ICE
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_ENG1_ANTI_ICE
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_ENG2_ANTI_ICE
+  -
+    type: var
+    var_name: L:S_OH_PROBE_HEAT
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_PRESS_MODE
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_DITCHING
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_DITCHING_Cover
+  -
+    type: var
+    var_name: L:A_OH_PNEUMATIC_LDG_ELEV
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_PRESS_MAN
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_BLOWER
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_EXTRACT
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_CAB_FANS
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_HOT_AIR_AFT_CARGO
+  -
+    type: var
+    var_name: L:S_OH_PNEUMATIC_CARGO_AFT_ISOL_VALVE
+  -
+    type: var
+    var_name: L:A_OH_PNEUMATIC_CARGO_AFT_TEMP
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_CARGO_AFT_ISOL_VALVE_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_CARGO_AFT_ISOL_VALVE_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_HOT_AIR_AFT_CARGO_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_HOT_AIR_AFT_CARGO_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG1_ANTI_ICE_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG1_ANTI_ICE_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG2_ANTI_ICE_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG2_ANTI_ICE_U
+  -
+    type: var
+    var_name: L:I_OH_PROBE_HEAT_L
+  -
+    type: var
+    var_name: L:I_OH_PROBE_HEAT_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_WING_ANTI_ICE_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_WING_ANTI_ICE_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_APU_BLEED_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_APU_BLEED_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG1_BLEED_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG1_BLEED_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG2_BLEED_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_ENG2_BLEED_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_HOT_AIR_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_HOT_AIR_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_PACK_1_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_PACK_1_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_PACK_2_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_PACK_2_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_RAM_AIR_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_DITCHING_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_PRESS_MODE_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_PRESS_MODE_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_BLOWER_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_BLOWER_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_CAB_FANS_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_CAB_FANS_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_EXTRACT_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_EXTRACT_U
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_CARGO_FWD_ISOL_VALVE_L
+  -
+    type: var
+    var_name: L:I_OH_PNEUMATIC_CARGO_FWD_ISOL_VALVE_U
+  # RCRD
+  -
+    type: var
+    var_name: L:S_OH_RCRD_GND_CTL
+  -
+    type: var
+    var_name: L:S_OH_RCRD_ERASE
+  -
+    type: var
+    var_name: L:S_OH_RCRD_TEST
+  -
+    type: var
+    var_name: L:I_OH_RCRD_GND_CTL_L
+  # OXYGEN
+  -
+    type: var
+    var_name: L:S_OH_OXYGEN_MASK_MAN_ON
+  -
+    type: var
+    var_name: L:S_OH_OXYGEN_MASK_MAN_ON_Cover
+  -
+    type: var
+    var_name: L:S_OH_OXYGEN_CREW_OXYGEN
+  -
+    type: var
+    var_name: L:S_OH_OXYGEN_HIGH_ALT
+  -
+    type: var
+    var_name: L:S_OH_OXYGEN_HIGH_ALT_Cover
+  -
+    type: var
+    var_name: L:S_OH_OXYGEN_TMR_RESET
+  -
+    type: var
+    var_name: L:I_OH_OXYGEN_TMR_RESET_L
+  -
+    type: var
+    var_name: L:I_OH_OXYGEN_TMR_RESET_U
+  -
+    type: var
+    var_name: L:I_OH_OXYGEN_HIGH_ALT_L
+  -
+    type: var
+    var_name: L:I_OH_OXYGEN_CREW_OXYGEN_L
+  -
+    type: var
+    var_name: L:I_OH_OXYGEN_PASSENGER_U
+  # CALLS
+  -
+    type: var
+    var_name: L:S_OH_CALLS_MECH
+  -
+    type: var
+    var_name: L:S_OH_CALLS_ALL
+  -
+    type: var
+    var_name: L:S_OH_CALLS_FWD
+  -
+    type: var
+    var_name: L:S_OH_CALLS_AFT
+  -
+    type: var
+    var_name: L:S_OH_CALLS_EMER
+  -
+    type: var
+    var_name: L:S_OH_CALLS_EMER_Cover
+  -
+    type: var
+    var_name: L:I_OH_CALLS_EMER_L
+  -
+    type: var
+    var_name: L:I_OH_CALLS_EMER_U
+  # LIGHT
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_STROBE
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_BEACON
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_WING
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_NAV_LOGO
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_RWY_TURNOFF
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_LANDING_L
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_LANDING_R
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_LANDING_BOTH
+  -
+    type: var
+    var_name: L:S_OH_EXT_LT_NOSE
+  -
+    type: var
+    var_name: L:S_OH_IN_LT_ICE
+  -
+    type: var
+    var_name: L:S_OH_INT_LT_DOME
+  -
+    type: var
+    var_name: L:S_OH_IN_LT_ANN_LT
+  -
+    type: var
+    var_name: L:S_OH_INT_LT_EMER
+  -
+    type: var
+    var_name: L:I_OH_INT_LT_EMER_OFF
+  -
+    type: var
+    var_name: L:I_OH_INT_LT_ICE
+  # ENG
+  -
+    type: var
+    var_name: L:S_OH_ENG_MANSTART_1
+  -
+    type: var
+    var_name: L:S_OH_ENG_MANSTART_1_Cover
+  -
+    type: var
+    var_name: L:S_OH_ENG_MANSTART_2
+  -
+    type: var
+    var_name: L:S_OH_ENG_MANSTART_2_Cover
+  -
+    type: var
+    var_name: L:S_OH_ENG_N1_MODE_1
+  -
+    type: var
+    var_name: L:S_OH_ENG_N1_MODE_1_Cover
+  -
+    type: var
+    var_name: L:S_OH_ENG_N1_MODE_2
+  -
+    type: var
+    var_name: L:S_OH_ENG_N1_MODE_2_Cover
+  -
+    type: var
+    var_name: L:I_OH_ENG_MANSTART_1_L
+  -
+    type: var
+    var_name: L:I_OH_ENG_MANSTART_2_L
+  # CARGO_SMOKE
+  -
+    type: var
+    var_name: L:S_OH_CARGO_SMOKE_TEST
+  -
+    type: var
+    var_name: L:S_OH_CARGO_SMOKE_AFT
+  -
+    type: var
+    var_name: L:S_OH_CARGO_SMOKE_FWD
+  -
+    type: var
+    var_name: L:S_OH_CARGO_DISC_1_OLD_LAYOUT
+  -
+    type: var
+    var_name: L:S_OH_CARGO_DISC_1_OLD_LAYOUT_Cover
+  -
+    type: var
+    var_name: L:S_OH_CARGO_DISC_2_OLD_LAYOUT
+  -
+    type: var
+    var_name: L:S_OH_CARGO_DISC_2_OLD_LAYOUT_Cover
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_AFT_U
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_FWD_U
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_DISCHARGE_AGENT_2
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_DISCHARGE_1
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_DISCHARGE_2
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_FWD_L
+  -
+    type: var
+    var_name: L:I_OH_CARGO_SMOKE_AFT_L
+  # SIGNS
+  -
+    type: var
+    var_name: L:S_OH_SIGNS
+  -
+    type: var
+    var_name: L:S_OH_SIGNS_SMOKING
+  # WIPER
+  -
+    type: var
+    var_name: L:S_MISC_WIPER_CAPT
+  -
+    type: var
+    var_name: L:S_MISC_WIPER_FO
+  -
+    type: var
+    var_name: L:S_MISC_WIPER_REPELLENT_CAPT
+  -
+    type: var
+    var_name: L:S_MISC_WIPER_REPELLENT_FO
+  # ELT
+  -
+    type: var
+    var_name: L:S_OH_ELT
+  -
+    type: var
+    var_name: L:S_OH_ELT_Cover
+  -
+    type: var
+    var_name: L:S_OH_ELT_TEST
+  # SVCE
+  -
+    type: var
+    var_name: L:S_OH_SVCE_INT_OVRD
+  -
+    type: var
+    var_name: L:I_OH_SVCE_INT_OVRD
+  -
+    type: var
+    var_name: L:I_OH_SVCE_INT_OVRD_L
+  # APU
+  -
+    type: var
+    var_name: L:S_OH_APU_AUTOEXTING_TEST
+  -
+    type: var
+    var_name: L:S_OH_APU_AUTOEXTING_RESET
+  -
+    type: var
+    var_name: L:I_OH_APU_AUTOEXTING_TEST_L
+  -
+    type: var
+    var_name: L:I_OH_APU_AUTOEXTING_TEST_U
+  # MISC
+  -
+    type: var
+    var_name: L:S_OH_COCKPIT_DOOR_VIDEO
+  -
+    type: var
+    var_name: L:S_AUDIO_SWITCHING
+  -
+    type: var
+    var_name: L:S_OH_LIGHTING_AVIONICS_COMPT
+  -
+    type: var
+    var_name: L:I_OH_LIGHTING_AVIONICS_COMPT
+  -
+    type: var
+    var_name: L:I_OH_LIGHTING_AVIONICS_COMPT_L
+  -
+    type: var
+    var_name: L:S_STANDBY_COMPASS
+  # OTHER LT
+  -
+    type: var
+    var_name: L:A_OH_LIGHTING_READING_CAPT
+  -
+    type: var
+    var_name: L:A_OH_LIGHTING_READING_FO
+  -
+    type: var
+    var_name: L:A_OH_LIGHTING_OVD
+  -
+    type: var
+    var_name: L:N_OH_LIGHTING_OVD
+  # OVHD PANEL END
+  # ENGINE
+  -
+    type: var
+    var_name: L:S_ENG_MASTER_1
+  -
+    type: var
+    var_name: L:S_ENG_MASTER_2
+  -
+    type: var
+    var_name: L:S_ENG_MODE
+  -
+    type: var
+    var_name: L:I_ENG_FAULT_1
+  -
+    type: var
+    var_name: L:I_ENG_FAULT_2
+  -
+    type: var
+    var_name: L:I_ENG_FIRE_1
+  -
+    type: var
+    var_name: L:I_ENG_FIRE_2
+  # ENGINE END
+  # PED
+  -
+    type: var
+    var_name: L:S_PED_AIDS_PRINT
+  -
+    type: var
+    var_name: L:S_PED_DFDR_EVENT
+  -
+    type: var
+    var_name: L:S_PED_COCKPIT_DOOR_VIDEO
+  -
+    type: var
+    var_name: L:S_PED_COCKPIT_DOOR
+  -
+    type: var
+    var_name: L:I_PED_COCKPIT_DOOR_FAULT
+  -
+    type: var
+    var_name: L:I_PED_COCKPIT_DOOR_OPEN
+  -
+    type: var
+    var_name: L:I_PED_COCKPIT_DOOR_L
+  -
+    type: var
+    var_name: L:I_PED_COCKPIT_DOOR_U
+  -
+    type: var
+    var_name: L:S_XPDR_OPREATION
+  -
+    type: var
+    var_name: L:S_XPDR_ATC
+  -
+    type: var
+    var_name: L:S_XPDR_ALTREPORTING
+  -
+    type: var
+    var_name: L:S_XPDR_IDENT
+  -
+    type: var
+    var_name: L:S_XPDR_MODE
+  -
+    type: var
+    var_name: L:S_XPDR_FAIL
+  -
+    type: var
+    var_name: L:S_XPDR_ATC_2
+  -
+    type: var
+    var_name: L:S_XPDR_ATC_1
+  -
+    type: var
+    var_name: L:S_PED_ATC_1
+  -
+    type: var
+    var_name: L:S_PED_ATC_2
+  -
+    type: var
+    var_name: L:S_PED_ATC_3
+  -
+    type: var
+    var_name: L:S_PED_ATC_4
+  -
+    type: var
+    var_name: L:S_PED_ATC_5
+  -
+    type: var
+    var_name: L:S_PED_ATC_6
+  -
+    type: var
+    var_name: L:S_PED_ATC_7
+  -
+    type: var
+    var_name: L:S_PED_ATC_8
+  -
+    type: var
+    var_name: L:S_PED_ATC_9
+  -
+    type: var
+    var_name: L:S_PED_ATC_0
+  -
+    type: var
+    var_name: L:S_PED_ATC_CLR
+  -
+    type: var
+    var_name: L:A_PED_LIGHTING_PEDESTAL
+  -
+    type: var
+    var_name: L:N_PED_LIGHTING_PEDESTAL
+  # PED END
+  # TCAS
+  -
+    type: var
+    var_name: L:S_TCAS_RANGE
+  -
+    type: var
+    var_name: L:S_TCAS_HORIZONTAL_RANGE
+  # TCAS END
+  # GEAR
+  -
+    type: var
+    var_name: L:S_HYD_GRACITY_GEAR_EXTEND_ROTATION
+  -
+    type: var
+    var_name: L:S_HYD_GRACITY_GEAR_EXTEND
+  -
+    type: var
+    var_name: L:S_HYD_GRACITY_GEAR_HANDLE
+  # GEAR END
+  # MISC LIGHT & DISPLAY
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_CO
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_FO
+  -
+    type: var
+    var_name: L:S_DISPLAY_PFDND_XFER_CAPT
+  -
+    type: var
+    var_name: L:S_DISPLAY_PFDND_XFER_FO
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_CI_OUTER
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_FI_OUTER
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_CI
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_FI
+  -
+    type: var
+    var_name: L:N_DISPLAY_BRIGHTNESS_CO
+  -
+    type: var
+    var_name: L:N_DISPLAY_BRIGHTNESS_FO
+  -
+    type: var
+    var_name: L:N_DISPLAY_BRIGHTNESS_CI
+  -
+    type: var
+    var_name: L:N_DISPLAY_BRIGHTNESS_FI
+  -
+    type: var
+    var_name: L:A_CHART_LIGHT_TEMP_CAPT
+  -
+    type: var
+    var_name: L:A_CHART_LIGHT_TEMP_FO
+  -
+    type: var
+    var_name: L:S_CHART_LIGHT_TEMP_CAPT
+  -
+    type: var
+    var_name: L:S_CHART_LIGHT_TEMP_FO
+  # MISC LIGHT END
+  # WINDOW & DOOR
+  -
+    type: var
+    var_name: L:S_WINDOW_BLINDS_CAPT
+  -
+    type: var
+    var_name: L:S_WINDOW_BLINDS_FO
+  -
+    type: var
+    var_name: L:N_WINDOW_CAPT
+  -
+    type: var
+    var_name: L:S_WINDOW_CAPT_LATCH
+  -
+    type: var
+    var_name: L:S_WINDOW_CAPT_LEVER
+  -
+    type: var
+    var_name: L:S_WINDOW_CAPT_LEVER_BUTTON
+  -
+    type: var
+    var_name: L:N_WINDOW_FO
+  -
+    type: var
+    var_name: L:S_WINDOW_FO_LATCH
+  -
+    type: var
+    var_name: L:S_WINDOW_FO_LEVER
+  -
+    type: var
+    var_name: L:S_WINDOW_FO_LEVER_BUTTON
+  -
+    type: var
+    var_name: L:S_SUNSHADE_CAPT
+  -
+    type: var
+    var_name: L:S_SUNSHADE_FO
+  -
+    type: var
+    var_name: L:S_COCKPIT_DOOR
+  -
+    type: var
+    var_name: L:S_OXYGEN_MASK_COVER_CAPT
+  -
+    type: var
+    var_name: L:S_OXYGEN_MASK_COVER_FO
+  -
+    type: var
+    var_name: L:S_ARMREST_LEFT_CAPT
+  -
+    type: var
+    var_name: L:S_ARMREST_RIGHT_CAPT
+  -
+    type: var
+    var_name: L:S_ARMREST_LEFT_FO
+  -
+    type: var
+    var_name: L:S_ARMREST_RIGHT_FO
+  # WINDOW & DOOR END
+  # EFB
+  -
+    type: var
+    var_name: L:S_EFB_VISIBLE_CAPT
+  -
+    type: var
+    var_name: L:S_EFB_VISIBLE_FO
+  -
+    type: var
+    var_name: L:S_EFB_CHARGING_CABLE_CAPT
+  -
+    type: var
+    var_name: L:S_EFB_CHARGING_CABLE_CAPT_TEMP
+  -
+    type: var
+    var_name: L:S_EFB_CHARGING_CABLE_FO
+  -
+    type: var
+    var_name: L:S_EFB_CHARGING_CABLE_FO_TEMP
+  # EFB END
+  # FCU
+  # EFIS1
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_BARO_MODE
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_FD
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_LS
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_CSTR
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_WPT
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_VORD
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_NDB
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_ARPT
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_ND_MODE
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_ND_ZOOM
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_NAV1
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_NAV2
+  -
+    type: var
+    var_name: L:S_FCU_EFIS1_BARO_STD
+  -
+    type: var
+    var_name: L:E_FCU_EFIS1_BARO
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_APRT
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_CSTR
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_FD
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_LS
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_NDB
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_VORD
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_WPT
+  -
+    type: var
+    var_name: L:I_FCU_EFIS1_QNH
+  # EFIS2
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_BARO_MODE
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_FD
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_LS
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_CSTR
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_WPT
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_VORD
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_NDB
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_ARPT
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_ND_MODE
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_ND_ZOOM
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_NAV1
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_NAV2
+  -
+    type: var
+    var_name: L:S_FCU_EFIS2_BARO_STD
+  -
+    type: var
+    var_name: L:E_FCU_EFIS2_BARO
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_APRT
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_CSTR
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_FD
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_LS
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_NDB
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_VORD
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_WPT
+  -
+    type: var
+    var_name: L:I_FCU_EFIS2_QNH
+  # CENTER
+  -
+    type: var
+    var_name: L:S_FCU_SPD_MACH
+  -
+    type: var
+    var_name: L:S_FCU_HDGVS_TRKFPA
+  -
+    type: var
+    var_name: L:S_FCU_METRIC_ALT
+  -
+    type: var
+    var_name: L:S_FCU_AP1
+  -
+    type: var
+    var_name: L:S_FCU_AP2
+  -
+    type: var
+    var_name: L:S_FCU_LOC
+  -
+    type: var
+    var_name: L:S_FCU_ATHR
+  -
+    type: var
+    var_name: L:S_FCU_EXPED
+  -
+    type: var
+    var_name: L:S_FCU_APPR
+  -
+    type: var
+    var_name: L:S_FCU_ALTITUDE_SCALE
+  -
+    type: var
+    var_name: L:A_FCU_LIGHTING
+  -
+    type: var
+    var_name: L:A_FCU_LIGHTING_TEXT
+  -
+    type: var
+    var_name: L:I_FCU_AP1
+  -
+    type: var
+    var_name: L:I_FCU_AP2
+  -
+    type: var
+    var_name: L:I_FCU_APPR
+  -
+    type: var
+    var_name: L:I_FCU_ATHR
+  -
+    type: var
+    var_name: L:I_FCU_EXPED
+  -
+    type: var
+    var_name: L:I_FCU_LOC
+  -
+    type: var
+    var_name: L:N_FCU_LIGHTING
+  -
+    type: var
+    var_name: L:N_FCU_LIGHTING_TEXT
+  -
+    type: var
+    var_name: L:S_FCU_SPEED
+  -
+    type: var
+    var_name: L:E_FCU_SPEED
+  -
+    type: var
+    var_name: L:S_FCU_HEADING
+  -
+    type: var
+    var_name: L:E_FCU_HEADING
+  -
+    type: var
+    var_name: L:S_FCU_ALTITUDE
+  -
+    type: var
+    var_name: L:E_FCU_ALTITUDE
+  -
+    type: var
+    var_name: L:S_FCU_VERTICAL_SPEED
+  -
+    type: var
+    var_name: L:E_FCU_VS
+  -
+    type: var
+    var_name: L:I_FCU_SPEED_MANAGED
+  -
+    type: var
+    var_name: L:I_FCU_SPEED_MODE
+  -
+    type: var
+    var_name: L:I_FCU_MACH_MODE
+  -
+    type: var
+    var_name: L:I_FCU_HEADING_VS_MODE
+  -
+    type: var
+    var_name: L:I_FCU_TRACK_FPA_MODE
+  -
+    type: var
+    var_name: L:I_FCU_HEADING_MANAGED
+  -
+    type: var
+    var_name: L:I_FCU_ALTITUDE_MANAGED
+  # FCU END
+  # ECAM
+  -
+    type: var
+    var_name: L:S_DISPLAY_ATT_HDG
+  -
+    type: var
+    var_name: L:S_DISPLAY_AIR_DATA
+  -
+    type: var
+    var_name: L:S_DISPLAY_EIS_DMC
+  -
+    type: var
+    var_name: L:S_DISPLAY_ECAM_ND_XFR
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_ECAM_U
+  -
+    type: var
+    var_name: L:A_DISPLAY_BRIGHTNESS_ECAM_L
+  -
+    type: var
+    var_name: L:N_DISPLAY_BRIGHTNESS_ECAM_U
+  -
+    type: var
+    var_name: L:N_DISPLAY_BRIGHTNESS_ECAM_L
+  -
+    type: var
+    var_name: L:S_ECAM_TO
+  -
+    type: var
+    var_name: L:S_ECAM_EMER_CANCEL
+  -
+    type: var
+    var_name: L:S_ECAM_EMER_CANCEL_Cover
+  -
+    type: var
+    var_name: L:S_ECAM_ENGINE
+  -
+    type: var
+    var_name: L:S_ECAM_BLEED
+  -
+    type: var
+    var_name: L:S_ECAM_CAB_PRESS
+  -
+    type: var
+    var_name: L:S_ECAM_ELEC
+  -
+    type: var
+    var_name: L:S_ECAM_HYD
+  -
+    type: var
+    var_name: L:S_ECAM_FUEL
+  -
+    type: var
+    var_name: L:S_ECAM_APU
+  -
+    type: var
+    var_name: L:S_ECAM_COND
+  -
+    type: var
+    var_name: L:S_ECAM_DOOR
+  -
+    type: var
+    var_name: L:S_ECAM_WHEEL
+  -
+    type: var
+    var_name: L:S_ECAM_FCTL
+  -
+    type: var
+    var_name: L:S_ECAM_ALL
+  -
+    type: var
+    var_name: L:S_ECAM_CLR_LEFT
+  -
+    type: var
+    var_name: L:S_ECAM_CLR_RIGHT
+  -
+    type: var
+    var_name: L:S_ECAM_STATUS
+  -
+    type: var
+    var_name: L:S_ECAM_RCL
+  -
+    type: var
+    var_name: L:I_ECAM_EMER_CANCEL
+  -
+    type: var
+    var_name: L:I_ECAM_APU
+  -
+    type: var
+    var_name: L:I_ECAM_BLEED
+  -
+    type: var
+    var_name: L:I_ECAM_CLR_LEFT
+  -
+    type: var
+    var_name: L:I_ECAM_CLR_RIGHT
+  -
+    type: var
+    var_name: L:I_ECAM_COND
+  -
+    type: var
+    var_name: L:I_ECAM_DOOR
+  -
+    type: var
+    var_name: L:I_ECAM_ELEC
+  -
+    type: var
+    var_name: L:I_ECAM_ENGINE
+  -
+    type: var
+    var_name: L:I_ECAM_FCTL
+  -
+    type: var
+    var_name: L:I_ECAM_FUEL
+  -
+    type: var
+    var_name: L:I_ECAM_HYD
+  -
+    type: var
+    var_name: L:I_ECAM_CAB_PRESS
+  -
+    type: var
+    var_name: L:I_ECAM_STATUS
+  -
+    type: var
+    var_name: L:I_ECAM_WHEEL
+  # ECAM END
+  # MIP
+  -
+    type: var
+    var_name: L:S_MIP_PARKING_BRAKE
+  -
+    type: var
+    var_name: L:S_MIP_ATC_MSG_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_ATC_MSG_FO
+  -
+    type: var
+    var_name: L:S_MIP_AUTOLAND_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_AUTOLAND_FO
+  -
+    type: var
+    var_name: L:S_MIP_MASTER_WARNING_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_MASTER_WARNING_FO
+  -
+    type: var
+    var_name: L:S_MIP_MASTER_CAUTION_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_MASTER_CAUTION_FO
+  -
+    type: var
+    var_name: L:S_MIP_CHRONO_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_CHRONO_FO
+  -
+    type: var
+    var_name: L:S_MIP_GPWS_VISUAL_ALERT_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_GPWS_VISUAL_ALERT_FO
+  -
+    type: var
+    var_name: L:A_MIP_LOUDSPEAKER_CAPT
+  -
+    type: var
+    var_name: L:A_MIP_LOUDSPEAKER_FO
+  -
+    type: var
+    var_name: L:S_MIP_LIGHT_CONSOLEFLOOR_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_LIGHT_CONSOLEFLOOR_FO
+  -
+    type: var
+    var_name: L:S_MIP_GPWS_TERRAIN_ON_ND_CAPT
+  -
+    type: var
+    var_name: L:S_MIP_GPWS_TERRAIN_ON_ND_FO
+  -
+    type: var
+    var_name: L:S_MIP_ISFD_PLUS
+  -
+    type: var
+    var_name: L:S_MIP_ISFD_MINUS
+  -
+    type: var
+    var_name: L:S_MIP_ISFD_BUGS
+  -
+    type: var
+    var_name: L:S_MIP_ISFD_LS
+  -
+    type: var
+    var_name: L:S_MIP_ISFD_RST
+  -
+    type: var
+    var_name: L:E_MIP_ISFD_BARO
+  -
+    type: var
+    var_name: L:S_MIP_ISFD_BARO_BUTTON
+  -
+    type: var
+    var_name: L:S_MIP_AUTOBRAKE_LO
+  -
+    type: var
+    var_name: L:S_MIP_AUTOBRAKE_MED
+  -
+    type: var
+    var_name: L:S_MIP_AUTOBRAKE_MAX
+  -
+    type: var
+    var_name: L:S_MIP_BRAKE_FAN
+  -
+    type: var
+    var_name: L:S_MIP_CLOCK_RST
+  -
+    type: var
+    var_name: L:S_MIP_CLOCK_CHR
+  -
+    type: var
+    var_name: L:E_MIP_CLOCK_SET
+  -
+    type: var
+    var_name: L:S_MIP_CLOCK_SET
+  -
+    type: var
+    var_name: L:S_MIP_CLOCK_UTC
+  -
+    type: var
+    var_name: L:S_MIP_CLOCK_ET
+  -
+    type: var
+    var_name: L:S_MIP_GEAR
+  -
+    type: var
+    var_name: L:A_MIP_LIGHTING_MAP_L
+  -
+    type: var
+    var_name: L:A_MIP_LIGHTING_MAP_R
+  -
+    type: var
+    var_name: L:A_MIP_LIGHTING_FLOOD_MAIN
+  -
+    type: var
+    var_name: L:A_MIP_LIGHTING_FLOOD_PEDESTAL
+  -
+    type: var
+    var_name: L:I_MIP_AUTOLAND_CAPT
+  -
+    type: var
+    var_name: L:I_MIP_AUTOLAND_FO
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_CAUTION_CAPT
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_CAUTION_CAPT_L
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_CAUTION_FO
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_CAUTION_FO_L
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_WARNING_CAPT
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_WARNING_CAPT_L
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_WARNING_FO
+  -
+    type: var
+    var_name: L:I_MIP_MASTER_WARNING_FO_L
+  -
+    type: var
+    var_name: L:I_MIP_ATC_MSG_CAPT_U
+  -
+    type: var
+    var_name: L:I_MIP_ATC_MSG_CAPT_L
+  -
+    type: var
+    var_name: L:I_MIP_ATC_MSG_FO_U
+  -
+    type: var
+    var_name: L:I_MIP_ATC_MSG_FO_L
+  -
+    type: var
+    var_name: L:I_MIP_AUTOBRAKE_LO_L
+  -
+    type: var
+    var_name: L:I_MIP_AUTOBRAKE_LO_U
+  -
+    type: var
+    var_name: L:I_MIP_AUTOBRAKE_MAX_L
+  -
+    type: var
+    var_name: L:I_MIP_AUTOBRAKE_MAX_U
+  -
+    type: var
+    var_name: L:I_MIP_AUTOBRAKE_MED_L
+  -
+    type: var
+    var_name: L:I_MIP_AUTOBRAKE_MED_U
+  -
+    type: var
+    var_name: L:I_MIP_BRAKE_FAN_L
+  -
+    type: var
+    var_name: L:I_MIP_BRAKE_FAN_U
+  -
+    type: var
+    var_name: L:I_MIP_GPWS_VISUAL_ALERT_CAPT_L
+  -
+    type: var
+    var_name: L:I_MIP_GPWS_VISUAL_ALERT_CAPT_U
+  -
+    type: var
+    var_name: L:I_MIP_GPWS_VISUAL_ALERT_FO_L
+  -
+    type: var
+    var_name: L:I_MIP_GPWS_VISUAL_ALERT_FO_U
+  -
+    type: var
+    var_name: L:I_MIP_GPWS_TERRAIN_ON_ND_CAPT_L
+  -
+    type: var
+    var_name: L:I_MIP_GPWS_TERRAIN_ON_ND_FO_L
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_1_L
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_1_U
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_2_L
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_2_U
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_3_L
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_3_U
+  -
+    type: var
+    var_name: L:I_MIP_GEAR_RED
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_MAP_R
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_PEDESTAL
+  -
+    type: var
+    var_name: L:S_MIP_RDME_NEEDLE_2
+  -
+    type: var
+    var_name: L:S_MIP_RDME_NEEDLE_1
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_PEDESTAL_R
+  -
+    type: var
+    var_name: L:S_MIP_NORTH_REF
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_PEDESTAL_L
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_CENTER_L
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_CENTER_R
+  -
+    type: var
+    var_name: L:I_MIP_NORTH_REF_L
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_MAIN_L
+  -
+    type: var
+    var_name: L:N_MIP_LIGHTING_FLOOD_MAIN_R
+  # MIP END
+  # MCDU
+  # CDU1
+  -
+    type: var
+    var_name: L:N_CDU1_BRIGHTNESS
+  -
+    type: var
+    var_name: L:I_CDU1_FM
+  -
+    type: var
+    var_name: L:I_CDU1_FM1
+  -
+    type: var
+    var_name: L:I_CDU1_FM2
+  -
+    type: var
+    var_name: L:I_CDU1_IND
+  -
+    type: var
+    var_name: L:I_CDU1_MCDU_MENU
+  -
+    type: var
+    var_name: L:I_CDU1_RDY
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK1L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK2L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK3L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK4L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK5L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK6L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK1R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK2R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK3R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK4R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK5R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_LSK6R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_DIR
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_PROG
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_PERF
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_INIT
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_DATA
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_FPLN
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_RAD_NAV
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_FUEL_PRED
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_SEC_FPLN
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_ATC_COM
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_MENU
+  -
+    type: var
+    var_name: L:S_CDU1_BRIGHTNESS_UP
+  -
+    type: var
+    var_name: L:S_CDU1_BRIGHTNESS_DOWN
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_AIRPORT
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_ARROW_LEFT
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_ARROW_RIGHT
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_ARROW_DOWN
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_ARROW_UP
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_1
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_2
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_3
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_4
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_5
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_6
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_7
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_8
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_9
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_DOT
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_0
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_MINUS
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_A
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_B
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_C
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_D
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_E
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_F
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_G
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_H
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_I
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_J
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_K
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_L
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_M
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_N
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_O
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_P
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_Q
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_R
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_S
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_T
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_U
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_V
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_W
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_X
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_Y
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_Z
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_SLASH
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_SPACE
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_OVFLY
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_CLEAR
+  -
+    type: var
+    var_name: L:S_CDU1_KEY_CLEAR_LINE
+  # CDU2
+  -
+    type: var
+    var_name: L:N_CDU2_BRIGHTNESS
+  -
+    type: var
+    var_name: L:I_CDU2_FM
+  -
+    type: var
+    var_name: L:I_CDU2_FM1
+  -
+    type: var
+    var_name: L:I_CDU2_FM2
+  -
+    type: var
+    var_name: L:I_CDU2_IND
+  -
+    type: var
+    var_name: L:I_CDU2_MCDU_MENU
+  -
+    type: var
+    var_name: L:I_CDU2_RDY
+  -
+    type: var
+    var_name: L:N_CDU2_BRIGHTNESS
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK1L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK2L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK3L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK4L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK5L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK6L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK1R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK2R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK3R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK4R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK5R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_LSK6R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_DIR
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_PROG
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_PERF
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_INIT
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_DATA
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_FPLN
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_RAD_NAV
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_FUEL_PRED
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_SEC_FPLN
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_ATC_COM
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_MENU
+  -
+    type: var
+    var_name: L:S_CDU2_BRIGHTNESS_UP
+  -
+    type: var
+    var_name: L:S_CDU2_BRIGHTNESS_DOWN
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_AIRPORT
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_ARROW_LEFT
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_ARROW_RIGHT
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_ARROW_DOWN
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_ARROW_UP
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_1
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_2
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_3
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_4
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_5
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_6
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_7
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_8
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_9
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_DOT
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_0
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_MINUS
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_A
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_B
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_C
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_D
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_E
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_F
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_G
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_H
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_I
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_J
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_K
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_L
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_M
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_N
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_O
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_P
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_Q
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_R
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_S
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_T
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_U
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_V
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_W
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_X
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_Y
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_Z
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_SLASH
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_SPACE
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_OVFLY
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_CLEAR
+  -
+    type: var
+    var_name: L:S_CDU2_KEY_CLEAR_LINE
+  # MCDU END
+  # RADIO
+  # ASP1
+  -
+    type: var
+    var_name: L:S_ASP_VHF_1_SEND
+  -
+    type: var
+    var_name: L:S_ASP_VHF_2_SEND
+  -
+    type: var
+    var_name: L:S_ASP_VHF_3_SEND
+  -
+    type: var
+    var_name: L:S_ASP_HF_1_SEND
+  -
+    type: var
+    var_name: L:S_ASP_HF_2_SEND
+  -
+    type: var
+    var_name: L:S_ASP_INT_SEND
+  -
+    type: var
+    var_name: L:S_ASP_CAB_SEND
+  -
+    type: var
+    var_name: L:S_ASP_VOICE
+  -
+    type: var
+    var_name: L:S_ASP_RESET
+  -
+    type: var
+    var_name: L:S_ASP_PA_SEND
+  -
+    type: var
+    var_name: L:A_ASP_VHF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_VHF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_VHF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP_VHF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_VHF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_VHF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP_VHF_3_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_VHF_3_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_VHF_3_REC
+  -
+    type: var
+    var_name: L:A_ASP_HF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_HF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_HF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP_HF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_HF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_HF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP_INT_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_INT_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_INT_REC
+  -
+    type: var
+    var_name: L:A_ASP_CAB_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_CAB_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_CAB_REC
+  -
+    type: var
+    var_name: L:A_ASP_VOR_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_VOR_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_NAV_1_REC
+  -
+    type: var
+    var_name: L:A_ASP_VOR_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_VOR_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_NAV_2_REC
+  -
+    type: var
+    var_name: L:A_ASP_MARKER_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_MARKER_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_MARKER_REC
+  -
+    type: var
+    var_name: L:A_ASP_ILS_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_ILS_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_ILS_REC
+  -
+    type: var
+    var_name: L:A_ASP_MLS_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_MLS_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_MLS_REC
+  -
+    type: var
+    var_name: L:A_ASP_ADF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_ADF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_ADF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP_ADF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_ADF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_ADF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP_PA_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_PA_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP_PA_REC
+  -
+    type: var
+    var_name: L:S_ASP_INTRAD
+  -
+    type: var
+    var_name: L:I_ASP_CAB_CALL
+  -
+    type: var
+    var_name: L:I_ASP_CAB_SEND
+  -
+    type: var
+    var_name: L:I_ASP_HF_1_CALL
+  -
+    type: var
+    var_name: L:I_ASP_HF_1_SEND
+  -
+    type: var
+    var_name: L:I_ASP_HF_2_CALL
+  -
+    type: var
+    var_name: L:I_ASP_INT_CALL
+  -
+    type: var
+    var_name: L:I_ASP_INT_SEND
+  -
+    type: var
+    var_name: L:I_ASP_PA_SEND
+  -
+    type: var
+    var_name: L:I_ASP_VHF_1_CALL
+  -
+    type: var
+    var_name: L:I_ASP_VHF_1_SEND
+  -
+    type: var
+    var_name: L:I_ASP_VHF_2_CALL
+  -
+    type: var
+    var_name: L:I_ASP_VHF_2_SEND
+  -
+    type: var
+    var_name: L:I_ASP_VHF_3_CALL
+  -
+    type: var
+    var_name: L:I_ASP_VHF_3_SEND
+  -
+    type: var
+    var_name: L:I_ASP_VOICE
+  -
+    type: var
+    var_name: L:S_ASP_VHF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP_INT
+  -
+    type: var
+    var_name: L:S_ASP_VOR_2_REC
+  -
+    type: var
+    var_name: L:I_ASP_MLS_REC
+  -
+    type: var
+    var_name: L:S_ASP_SPKR_REC
+  -
+    type: var
+    var_name: L:S_ASP_VOR_1_REC
+  -
+    type: var
+    var_name: L:S_ASP_HF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP_CAB_REC
+  -
+    type: var
+    var_name: L:S_ASP_MLS_REC
+  -
+    type: var
+    var_name: L:S_ASP_MARKER_REC
+  -
+    type: var
+    var_name: L:I_ASP_HF_2_SEND
+  -
+    type: var
+    var_name: L:A_ASP_SPKR_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP_HF_2_REC
+  -
+    type: var
+    var_name: L:S_ASP_ILS_REC
+  -
+    type: var
+    var_name: L:S_ASP_INT_REC
+  -
+    type: var
+    var_name: L:S_ASP_RAD_REC
+  -
+    type: var
+    var_name: L:S_ASP_PA_REC
+  -
+    type: var
+    var_name: L:I_ASP_SPKR_REC
+  -
+    type: var
+    var_name: L:S_ASP_MASK
+  -
+    type: var
+    var_name: L:S_ASP_SPKR_REC_LATCH
+  -
+    type: var
+    var_name: L:S_ASP_ADF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP_ADF_2_REC
+  -
+    type: var
+    var_name: L:S_ASP_VOICE_LATCH
+  -
+    type: var
+    var_name: L:S_ASP_VHF_3_REC
+  -
+    type: var
+    var_name: L:S_ASP_VHF_2_REC
+  # ASP2
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_1_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_2_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_3_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_HF_1_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_HF_2_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_INT_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_CAB_SEND
+  -
+    type: var
+    var_name: L:S_ASP2_VOICE
+  -
+    type: var
+    var_name: L:S_ASP2_RESET
+  -
+    type: var
+    var_name: L:S_ASP2_PA_SEND
+  -
+    type: var
+    var_name: L:A_ASP2_VHF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP2_VHF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP2_VHF_3_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_3_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_3_REC
+  -
+    type: var
+    var_name: L:A_ASP2_HF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_HF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_HF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP2_HF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_HF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_HF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP2_INT_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_INT_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_INT_REC
+  -
+    type: var
+    var_name: L:A_ASP2_CAB_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_CAB_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_CAB_REC
+  -
+    type: var
+    var_name: L:A_ASP2_VOR_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_VOR_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_NAV_1_REC
+  -
+    type: var
+    var_name: L:A_ASP2_VOR_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_VOR_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_NAV_2_REC
+  -
+    type: var
+    var_name: L:A_ASP2_MARKER_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_MARKER_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_MARKER_REC
+  -
+    type: var
+    var_name: L:A_ASP2_ILS_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_ILS_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_ILS_REC
+  -
+    type: var
+    var_name: L:A_ASP2_MLS_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_MLS_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_MLS_REC
+  -
+    type: var
+    var_name: L:A_ASP2_ADF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_ADF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_ADF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP2_ADF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_ADF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_ADF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP2_PA_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_PA_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP2_PA_REC
+  -
+    type: var
+    var_name: L:S_ASP2_INTRAD
+  -
+    type: var
+    var_name: L:I_ASP2_CAB_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_CAB_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_HF_1_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_HF_1_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_HF_2_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_INT_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_INT_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_PA_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_1_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_1_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_2_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_2_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_3_CALL
+  -
+    type: var
+    var_name: L:I_ASP2_VHF_3_SEND
+  -
+    type: var
+    var_name: L:I_ASP2_VOICE
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP2_INT
+  -
+    type: var
+    var_name: L:S_ASP2_VOR_2_REC
+  -
+    type: var
+    var_name: L:I_ASP2_MLS_REC
+  -
+    type: var
+    var_name: L:S_ASP2_SPKR_REC
+  -
+    type: var
+    var_name: L:S_ASP2_VOR_1_REC
+  -
+    type: var
+    var_name: L:S_ASP2_HF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP2_CAB_REC
+  -
+    type: var
+    var_name: L:S_ASP2_MLS_REC
+  -
+    type: var
+    var_name: L:S_ASP2_MARKER_REC
+  -
+    type: var
+    var_name: L:I_ASP2_HF_2_SEND
+  -
+    type: var
+    var_name: L:A_ASP2_SPKR_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP2_HF_2_REC
+  -
+    type: var
+    var_name: L:S_ASP2_ILS_REC
+  -
+    type: var
+    var_name: L:S_ASP2_INT_REC
+  -
+    type: var
+    var_name: L:S_ASP2_RAD_REC
+  -
+    type: var
+    var_name: L:S_ASP2_PA_REC
+  -
+    type: var
+    var_name: L:I_ASP2_SPKR_REC
+  -
+    type: var
+    var_name: L:S_ASP2_MASK
+  -
+    type: var
+    var_name: L:S_ASP2_SPKR_REC_LATCH
+  -
+    type: var
+    var_name: L:S_ASP2_ADF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP2_ADF_2_REC
+  -
+    type: var
+    var_name: L:S_ASP2_VOICE_LATCH
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_3_REC
+  -
+    type: var
+    var_name: L:S_ASP2_VHF_2_REC
+  # ASP3
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_1_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_2_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_3_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_HF_1_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_HF_2_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_INT_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_CAB_SEND
+  -
+    type: var
+    var_name: L:S_ASP3_VOICE
+  -
+    type: var
+    var_name: L:S_ASP3_RESET
+  -
+    type: var
+    var_name: L:S_ASP3_PA_SEND
+  -
+    type: var
+    var_name: L:A_ASP3_VHF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP3_VHF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP3_VHF_3_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_3_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_3_REC
+  -
+    type: var
+    var_name: L:A_ASP3_HF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_HF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_HF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP3_HF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_HF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_HF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP3_INT_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_INT_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_INT_REC
+  -
+    type: var
+    var_name: L:A_ASP3_CAB_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_CAB_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_CAB_REC
+  -
+    type: var
+    var_name: L:A_ASP3_VOR_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_VOR_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_NAV_1_REC
+  -
+    type: var
+    var_name: L:A_ASP3_VOR_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_VOR_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_NAV_2_REC
+  -
+    type: var
+    var_name: L:A_ASP3_MARKER_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_MARKER_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_MARKER_REC
+  -
+    type: var
+    var_name: L:A_ASP3_ILS_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_ILS_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_ILS_REC
+  -
+    type: var
+    var_name: L:A_ASP3_MLS_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_MLS_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_MLS_REC
+  -
+    type: var
+    var_name: L:A_ASP3_ADF_1_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_ADF_1_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_ADF_1_REC
+  -
+    type: var
+    var_name: L:A_ASP3_ADF_2_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_ADF_2_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_ADF_2_REC
+  -
+    type: var
+    var_name: L:A_ASP3_PA_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_PA_REC_LATCH
+  -
+    type: var
+    var_name: L:I_ASP3_PA_REC
+  -
+    type: var
+    var_name: L:S_ASP3_INTRAD
+  -
+    type: var
+    var_name: L:I_ASP3_CAB_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_CAB_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_HF_1_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_HF_1_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_HF_2_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_INT_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_INT_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_PA_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_1_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_1_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_2_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_2_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_3_CALL
+  -
+    type: var
+    var_name: L:I_ASP3_VHF_3_SEND
+  -
+    type: var
+    var_name: L:I_ASP3_VOICE
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP3_INT
+  -
+    type: var
+    var_name: L:S_ASP3_VOR_2_REC
+  -
+    type: var
+    var_name: L:I_ASP3_MLS_REC
+  -
+    type: var
+    var_name: L:S_ASP3_SPKR_REC
+  -
+    type: var
+    var_name: L:S_ASP3_VOR_1_REC
+  -
+    type: var
+    var_name: L:S_ASP3_HF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP3_CAB_REC
+  -
+    type: var
+    var_name: L:S_ASP3_MLS_REC
+  -
+    type: var
+    var_name: L:S_ASP3_MARKER_REC
+  -
+    type: var
+    var_name: L:I_ASP3_HF_2_SEND
+  -
+    type: var
+    var_name: L:A_ASP3_SPKR_VOLUME
+  -
+    type: var
+    var_name: L:S_ASP3_HF_2_REC
+  -
+    type: var
+    var_name: L:S_ASP3_ILS_REC
+  -
+    type: var
+    var_name: L:S_ASP3_INT_REC
+  -
+    type: var
+    var_name: L:S_ASP3_RAD_REC
+  -
+    type: var
+    var_name: L:S_ASP3_PA_REC
+  -
+    type: var
+    var_name: L:I_ASP3_SPKR_REC
+  -
+    type: var
+    var_name: L:S_ASP3_MASK
+  -
+    type: var
+    var_name: L:S_ASP3_SPKR_REC_LATCH
+  -
+    type: var
+    var_name: L:S_ASP3_ADF_1_REC
+  -
+    type: var
+    var_name: L:S_ASP3_ADF_2_REC
+  -
+    type: var
+    var_name: L:S_ASP3_VOICE_LATCH
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_3_REC
+  -
+    type: var
+    var_name: L:S_ASP3_VHF_2_REC
+  # RMP1
+  -
+    type: var
+    var_name: L:S_PED_RMP1_VHF1
+  -
+    type: var
+    var_name: L:S_PED_RMP1_VHF2
+  -
+    type: var
+    var_name: L:S_PED_RMP1_VHF3
+  -
+    type: var
+    var_name: L:S_PED_RMP1_HF1
+  -
+    type: var
+    var_name: L:S_PED_RMP1_HF2
+  -
+    type: var
+    var_name: L:S_PED_RMP1_AM
+  -
+    type: var
+    var_name: L:S_PED_RMP1_NAV
+  -
+    type: var
+    var_name: L:S_PED_RMP1_NAV_Cover
+  -
+    type: var
+    var_name: L:S_PED_RMP1_VOR
+  -
+    type: var
+    var_name: L:S_PED_RMP1_ILS
+  -
+    type: var
+    var_name: L:S_PED_RMP1_MLS
+  -
+    type: var
+    var_name: L:S_PED_RMP1_ADF
+  -
+    type: var
+    var_name: L:S_PED_RMP1_BFO
+  -
+    type: var
+    var_name: L:S_PED_RMP1_XFER
+  -
+    type: var
+    var_name: L:S_PED_RMP1_POWER
+  -
+    type: var
+    var_name: L:E_PED_RMP1_OUTER
+  -
+    type: var
+    var_name: L:E_PED_RMP1_INNER
+  -
+    type: var
+    var_name: L:I_PED_RMP1_ADF
+  -
+    type: var
+    var_name: L:I_PED_RMP1_AM
+  -
+    type: var
+    var_name: L:I_PED_RMP1_BFO
+  -
+    type: var
+    var_name: L:I_PED_RMP1_MLS
+  -
+    type: var
+    var_name: L:I_PED_RMP1_HF1
+  -
+    type: var
+    var_name: L:I_PED_RMP1_HF2
+  -
+    type: var
+    var_name: L:I_PED_RMP1_ILS
+  -
+    type: var
+    var_name: L:I_PED_RMP1_NAV
+  -
+    type: var
+    var_name: L:I_PED_RMP1_SEL
+  -
+    type: var
+    var_name: L:I_PED_RMP1_VHF1
+  -
+    type: var
+    var_name: L:I_PED_RMP1_VHF2
+  -
+    type: var
+    var_name: L:I_PED_RMP1_VHF3
+  -
+    type: var
+    var_name: L:I_PED_RMP1_VOR
+  # RMP2
+  -
+    type: var
+    var_name: L:S_PED_RMP2_VHF1
+  -
+    type: var
+    var_name: L:S_PED_RMP2_VHF2
+  -
+    type: var
+    var_name: L:S_PED_RMP2_VHF3
+  -
+    type: var
+    var_name: L:S_PED_RMP2_HF1
+  -
+    type: var
+    var_name: L:S_PED_RMP2_HF2
+  -
+    type: var
+    var_name: L:S_PED_RMP2_AM
+  -
+    type: var
+    var_name: L:S_PED_RMP2_NAV
+  -
+    type: var
+    var_name: L:S_PED_RMP2_NAV_Cover
+  -
+    type: var
+    var_name: L:S_PED_RMP2_VOR
+  -
+    type: var
+    var_name: L:S_PED_RMP2_ILS
+  -
+    type: var
+    var_name: L:S_PED_RMP2_MLS
+  -
+    type: var
+    var_name: L:S_PED_RMP2_ADF
+  -
+    type: var
+    var_name: L:S_PED_RMP2_BFO
+  -
+    type: var
+    var_name: L:S_PED_RMP2_XFER
+  -
+    type: var
+    var_name: L:S_PED_RMP2_POWER
+  -
+    type: var
+    var_name: L:E_PED_RMP2_OUTER
+  -
+    type: var
+    var_name: L:E_PED_RMP2_INNER
+  -
+    type: var
+    var_name: L:I_PED_RMP2_ADF
+  -
+    type: var
+    var_name: L:I_PED_RMP2_AM
+  -
+    type: var
+    var_name: L:I_PED_RMP2_BFO
+  -
+    type: var
+    var_name: L:I_PED_RMP2_MLS
+  -
+    type: var
+    var_name: L:I_PED_RMP2_HF1
+  -
+    type: var
+    var_name: L:I_PED_RMP2_HF2
+  -
+    type: var
+    var_name: L:I_PED_RMP2_ILS
+  -
+    type: var
+    var_name: L:I_PED_RMP2_NAV
+  -
+    type: var
+    var_name: L:I_PED_RMP2_SEL
+  -
+    type: var
+    var_name: L:I_PED_RMP2_VHF1
+  -
+    type: var
+    var_name: L:I_PED_RMP2_VHF2
+  -
+    type: var
+    var_name: L:I_PED_RMP2_VHF3
+  -
+    type: var
+    var_name: L:I_PED_RMP2_VOR
+  # RMP3
+  -
+    type: var
+    var_name: L:S_PED_RMP3_VHF1
+  -
+    type: var
+    var_name: L:S_PED_RMP3_VHF2
+  -
+    type: var
+    var_name: L:S_PED_RMP3_VHF3
+  -
+    type: var
+    var_name: L:S_PED_RMP3_HF1
+  -
+    type: var
+    var_name: L:S_PED_RMP3_HF2
+  -
+    type: var
+    var_name: L:S_PED_RMP3_AM
+  -
+    type: var
+    var_name: L:S_PED_RMP3_NAV
+  -
+    type: var
+    var_name: L:S_PED_RMP3_NAV_Cover
+  -
+    type: var
+    var_name: L:S_PED_RMP3_VOR
+  -
+    type: var
+    var_name: L:S_PED_RMP3_ILS
+  -
+    type: var
+    var_name: L:S_PED_RMP3_MLS
+  -
+    type: var
+    var_name: L:S_PED_RMP3_ADF
+  -
+    type: var
+    var_name: L:S_PED_RMP3_BFO
+  -
+    type: var
+    var_name: L:S_PED_RMP3_XFER
+  -
+    type: var
+    var_name: L:S_PED_RMP3_POWER
+  -
+    type: var
+    var_name: L:E_PED_RMP3_OUTER
+  -
+    type: var
+    var_name: L:E_PED_RMP3_INNER
+  -
+    type: var
+    var_name: L:I_PED_RMP3_ADF
+  -
+    type: var
+    var_name: L:I_PED_RMP3_AM
+  -
+    type: var
+    var_name: L:I_PED_RMP3_BFO
+  -
+    type: var
+    var_name: L:I_PED_RMP3_MLS
+  -
+    type: var
+    var_name: L:I_PED_RMP3_HF1
+  -
+    type: var
+    var_name: L:I_PED_RMP3_HF2
+  -
+    type: var
+    var_name: L:I_PED_RMP3_ILS
+  -
+    type: var
+    var_name: L:I_PED_RMP3_NAV
+  -
+    type: var
+    var_name: L:I_PED_RMP3_SEL
+  -
+    type: var
+    var_name: L:I_PED_RMP3_VHF1
+  -
+    type: var
+    var_name: L:I_PED_RMP3_VHF2
+  -
+    type: var
+    var_name: L:I_PED_RMP3_VHF3
+  -
+    type: var
+    var_name: L:I_PED_RMP3_VOR
+  # RADIO END
+  # FLIGHT CONTROL(FC)
+  -
+    type: var
+    var_name: L:S_FC_CAPT_PRIORITY
+  -
+    type: var
+    var_name: L:S_FC_FO_PRIORITY
+  -
+    type: var
+    var_name: L:S_FC_MIP_ANTI_SKID
+  -
+    type: var
+    var_name: L:S_FC_RUDDER_TRIM
+  -
+    type: var
+    var_name: L:S_FC_RUDDER_TRIM_RESET
+  -
+    type: var
+    var_name: L:A_FC_SPEEDBRAKE
+  -
+    type: var
+    var_name: L:S_FC_FLAPS
+  -
+    type: var
+    var_name: L:S_FC_FLAPS_LATCH
+  -
+    type: var
+    var_name: L:N_FC_BRAKE_LEFT_CAPT
+  -
+    type: var
+    var_name: L:N_FC_BRAKE_RIGHT_CAPT
+  -
+    type: var
+    var_name: L:N_FC_BRAKE_LEFT_FO
+  -
+    type: var
+    var_name: L:N_FC_BRAKE_RIGHT_FO
+  -
+    type: var
+    var_name: L:N_FC_CAPT_TILLER
+  -
+    type: var
+    var_name: L:N_FC_FO_TILLER
+  -
+    type: var
+    var_name: L:N_FC_SIDESTICK_CAPT_PTICH
+  -
+    type: var
+    var_name: L:N_FC_SIDESTICK_CAPT_BANK
+  -
+    type: var
+    var_name: L:N_FC_SIDESTICK_FO_PTICH
+  -
+    type: var
+    var_name: L:N_FC_SIDESTICK_FO_BANK
+  -
+    type: var
+    var_name: L:S_FC_CAPT_INST_DISCONNECT
+  -
+    type: var
+    var_name: L:S_FC_FO_INST_DISCONNECT
+  -
+    type: var
+    var_name: L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT
+  -
+    type: var
+    var_name: L:S_FC_FO_TILLER_PEDAL_DISCONNECT
+  -
+    type: var
+    var_name: L:I_FC_SIDESTICK_PRIORITY_CAPT
+  -
+    type: var
+    var_name: L:I_FC_SIDESTICK_PRIORITY_CAPT_ARROW
+  -
+    type: var
+    var_name: L:I_FC_SIDESTICK_PRIORITY_FO
+  -
+    type: var
+    var_name: L:I_FC_SIDESTICK_PRIORITY_FO_ARROW
+  # FC END
+master:
+  # MAIN FLIGHT CONTROL
+  -
+    type: var
+    var_name: L:A_FC_THROTTLE_LEFT_INPUT
+  -
+    type: var
+    var_name: L:A_FC_THROTTLE_RIGHT_INPUT
+  -
+    type: var
+    var_name: L:S_FC_THR_INST_DISCONNECT1
+  -
+    type: var
+    var_name: L:S_FC_THR_INST_DISCONNECT2
+  -
+    type: var
+    var_name: L:A_FC_ELEVATOR_TRIM
+  -
+    type: var
+    var_name: L:B_FC_ELEVATOR_TRIM_MOTOR_POWER
+  -
+    type: var
+    var_name: L:N_FC_RUDDER
+server:
+  -
+    type: var
+    var_name: A:FUEL TANK CENTER LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:FUEL TANK LEFT MAIN LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:FUEL TANK RIGHT MAIN LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:FUEL TANK LEFT AUX LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:FUEL TANK RIGHT AUX LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:1
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:2
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:3
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:4
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:5
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:6
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:7
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:8
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:9
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:10
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  
