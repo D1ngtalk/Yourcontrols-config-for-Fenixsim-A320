@@ -1,4 +1,4 @@
-# Yourcontrols-config-for-Fenixsim-A320
+# Yourcontrols Config For Fenixsim A320
 A share cockpit config for Microsoft Flight Simulator's Fenixsim A320, based on Yourcontrols.
 
 
