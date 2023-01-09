@@ -5,7 +5,7 @@ A share cockpit config for Microsoft Flight Simulator's Fenixsim A320, based on 
 ## How to use
 Please be sure you have to install the Yourcontrols. If you don't, you can find it [here](https://github.com/Sequal32/yourcontrols).
 
-Open your Yourcontrols directory, download the YAML file and put it into \{yourcontrols directory}\definitions\aircraft
+Open your Yourcontrols directory, download the YAML file and put it into /{yourcontrols directory}/definitions/aircraft
 
 And you can choose Fenixsim A320 in Yourcontrols! Enjoy it!
 ## Known issues
