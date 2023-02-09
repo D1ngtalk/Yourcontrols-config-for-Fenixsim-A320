@@ -12,9 +12,15 @@ And you can choose Fenixsim A320 in Yourcontrols! Enjoy it!
 If you turn the FCU's knobs too fast, it will be out of sync.
 
 Throttle will be out of sync when you and your copilot use different external throttle device.
+
+Trim in air will spasm, if you transfer control, the aircraft may raise/lower the pitch sharply because of Auto trim value out of sync. manual pitch trim don't have this problem.
+
+Client's flight control surface(Aileron, Elevator, etc.) may move up and down when altitude above FL150.
 ## FAQs
 ### Can we use Simbrief and CPDLC?
-Yes, but you need use same hoppie ID and simbrief ID with your copilot.
+Yes, but you need use same Hoppie ID and Simbrief ID with your copilot.
+### How to take control easily?
+Press your AP disconnect button, you will take control.
 ### How to report issues?
 If you have and another issues, you can report it. I will try to fix it.
 ### Still out of sync?
