@@ -15,7 +15,7 @@ Throttle will be out of sync when you and your copilot use different external th
 
 Trim in air will spasm, if you transfer control, the aircraft may raise/lower the pitch sharply because of Auto trim value out of sync. manual pitch trim don't have this problem.
 
-Client's flight control surface(Aileron, Elevator, etc.) may move up and down when altitude above FL150.
+Client's flight control surface(Aileron, Elevator, etc.) may move up and down when altitude above FL150.#Fixed in lastest release
 ## FAQs
 ### Can we use Simbrief and CPDLC?
 Yes, but you need use same Hoppie ID and Simbrief ID with your copilot.
