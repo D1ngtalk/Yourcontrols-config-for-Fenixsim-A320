@@ -26,7 +26,7 @@ If you have and another issues, you can report it. I will try to fix it.
 ### Still out of sync?
 Some out of sync is due to NETWORK ISSUES, please check your connection with your copilot BEFORE report it as a bug.
 The recommended update rate is 60. If every thing still out of sync, try 120.
-## Solutions to some out of sync(thanks Hurfifx)
+### Solutions to some out of sync(thanks Hurfifx)
 FENIX RELATED :
 If one of you ONLY have CLR in the txt field MCDU, hit mdcu menu and select any option (ATSU...), it will throw an error and you will be able to CLR and you will now both have a cleared txt field.
 If one of you Have more ACARS message than the other, go to the tablet in fenix app, mass and balance hit resend loadshet as many times you need to have the same amount of acars messages.
